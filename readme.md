@@ -27,32 +27,32 @@ Note When someone copies / clones my repository they will install the specfic li
 
 ## Output:
 1. hpatel@LAPTOP-T97B270D:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
-Hello World. Type 'exit' to exit.
->>> exit
-Exiting...
+- Hello World. Type 'exit' to exit.
+-  >>> exit
+-  Exiting...
 
 2. hpatel@LAPTOP-T97B270D:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
-Type 'exit' to exit.
-Available commands: add, subtract, multiply, divide, menu
->>> menu
-Available commands: add, subtract, multiply, divide, menu
->>> add
-Error: 'add' requires two numeric arguments.
->>> add 5 6
-11.0
->>> subtract 10 4
-6.0
->>> multiply 2 5
-10.0
->>> divide 10 3
-3.3333333333333335
->>> divide 10 0
-Error: Division by zero
->>> goodmornig
-No such command: goodmornig
->>> exit
-Goodbye!
-Exiting...
+-  Type 'exit' to exit.
+-  Available commands: add, subtract, multiply, divide, menu
+-  >>> menu
+-  Available commands: add, subtract, multiply, divide, menu
+-  >>> add
+-  Error: 'add' requires two numeric arguments.
+-  >>> add 5 6
+-  11.0
+-  >>> subtract 10 4
+-  6.0
+-  >>> multiply 2 5
+-  10.0
+-  >>> divide 10 3
+-  3.3333333333333335
+-  >>> divide 10 0
+-  Error: Division by zero
+-  >>> goodmornig
+-  No such command: goodmornig
+-  >>> exit
+-  Goodbye!
+-  Exiting...
 
 ## Other commands used during project
  1. mv oldfile newfilename
