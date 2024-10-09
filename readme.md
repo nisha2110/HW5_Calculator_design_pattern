@@ -32,15 +32,16 @@ Note When someone copies / clones my repository they will install the specfic li
 
 2. hpatel:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
 -  Type 'exit' to exit.
--  Available commands: add, subtract, multiply, divide, menu
+-  Type 'menu' to see all available commands.
+Available commands: add, divide, exit, multiply, subtract
 -  ->> menu
--  Available commands: add, subtract, multiply, divide, menu
+-  Available commands: add, divide, exit, multiply, subtract
 -  ->> add
 -  Error: 'add' requires two numeric arguments.
 -  ->> add 5 6
 -  11.0
 -  ->> add e 3
-   Error: Both arguments must be numbers.
+-  Error: Both arguments must be numbers.
 -  ->> subtract 10 4
 -  6.0
 -  ->> multiply 2 5
@@ -50,7 +51,7 @@ Note When someone copies / clones my repository they will install the specfic li
 -  ->> divide 10 0
 -  Error: Division by zero
 -  --> divide 1
-   Error: 'divide' requires two numeric arguments.
+-  Error: 'divide' requires two numeric arguments.
 -  ->> goodmornig
 -  No such command: goodmornig
 -  ->> exit
