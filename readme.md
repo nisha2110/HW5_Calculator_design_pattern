@@ -20,9 +20,10 @@ Note When someone copies / clones my repository they will install the specfic li
 
 ## Testing
 
-1. pytest
-2. pytest --cov
-3. python main.py
+1. Run all tests with : pytest
+2. Run Coverage : pytest --cov
+3. Run application: python main.py
+4. To test a specific file, use pytest tests/test_calculator.py.
 
 ## Output:
 1. hpatel:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
