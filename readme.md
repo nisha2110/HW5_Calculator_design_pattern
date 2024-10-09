@@ -35,10 +35,12 @@ Note When someone copies / clones my repository they will install the specfic li
 -  Available commands: add, subtract, multiply, divide, menu
 -  ->> menu
 -  Available commands: add, subtract, multiply, divide, menu
--  -> add
+-  ->> add
 -  Error: 'add' requires two numeric arguments.
 -  ->> add 5 6
 -  11.0
+-  ->> add e 3
+   Error: Both arguments must be numbers.
 -  ->> subtract 10 4
 -  6.0
 -  ->> multiply 2 5
@@ -47,6 +49,8 @@ Note When someone copies / clones my repository they will install the specfic li
 -  3.3333333333333335
 -  ->> divide 10 0
 -  Error: Division by zero
+-  --> divide 1
+   Error: 'divide' requires two numeric arguments.
 -  ->> goodmornig
 -  No such command: goodmornig
 -  ->> exit
@@ -58,3 +62,4 @@ Note When someone copies / clones my repository they will install the specfic li
  2. git remote remove origin
  3. rm -rf .pytest_cache
  4. To add multiple specific files: git add path/to/file1.py path/to/file2.py path/to/file3.py
+ 5. coverage report -m
