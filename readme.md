@@ -20,26 +20,29 @@ Note When someone copies / clones my repository they will install the specfic li
 
 ## Testing
 
-1. pytest
-2. pytest --pylint
-3. pytest --pylint --cov
-4. python main.py
+1. Run all tests with : pytest
+2. Run Coverage : pytest --cov
+3. Run application: python main.py
+4. To test a specific file, use pytest tests/test_calculator.py.
 
 ## Output:
-1. hpatel@LAPTOP-T97B270D:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
+1. hpatel:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
 - Hello World. Type 'exit' to exit.
 -  ->> exit
 -  Exiting...
 
-2. hpatel@LAPTOP-T97B270D:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
+2. hpatel:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
 -  Type 'exit' to exit.
--  Available commands: add, subtract, multiply, divide, menu
+-  Type 'menu' to see all available commands.
+Available commands: add, divide, exit, multiply, subtract
 -  ->> menu
--  Available commands: add, subtract, multiply, divide, menu
--  -> add
+-  Available commands: add, divide, exit, multiply, subtract
+-  ->> add
 -  Error: 'add' requires two numeric arguments.
 -  ->> add 5 6
 -  11.0
+-  ->> add e 3
+-  Error: Both arguments must be numbers.
 -  ->> subtract 10 4
 -  6.0
 -  ->> multiply 2 5
@@ -48,6 +51,8 @@ Note When someone copies / clones my repository they will install the specfic li
 -  3.3333333333333335
 -  ->> divide 10 0
 -  Error: Division by zero
+-  --> divide 1
+-  Error: 'divide' requires two numeric arguments.
 -  ->> goodmornig
 -  No such command: goodmornig
 -  ->> exit
@@ -59,3 +64,4 @@ Note When someone copies / clones my repository they will install the specfic li
  2. git remote remove origin
  3. rm -rf .pytest_cache
  4. To add multiple specific files: git add path/to/file1.py path/to/file2.py path/to/file3.py
+ 5. coverage report -m: display a detailed coverage report, including information about the lines of code that missed during the tests.
