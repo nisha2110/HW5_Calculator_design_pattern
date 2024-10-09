@@ -26,7 +26,6 @@ class App:
     def print_available_commands(self):
         # Get available commands from the command handler
         available_commands = self.command_handler.get_registered_commands()
-        available_commands.append("menu")
         print("Available commands: " + ", ".join(available_commands))
         
     def start(self):
@@ -34,7 +33,7 @@ class App:
         self.load_plugins()
         
         print("Type 'exit' to exit.")
-        self.print_available_commands()  
+        print("Type 'menu' to see all available commands.")
         while True: #REPL Read, Evaluate, Print, Loop
             user_input = input(">>> ").strip().lower()
             if user_input == 'exit':
