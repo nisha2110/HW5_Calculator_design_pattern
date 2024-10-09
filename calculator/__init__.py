@@ -62,6 +62,6 @@ class App:
 
                 # Execute the command if arguments are valid
                 result = self.command_handler.execute_command(command_name, arg1, arg2)
-                print(result)
-
-               
+                if result:
+                    print(result)
+                
