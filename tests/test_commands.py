@@ -1,10 +1,11 @@
 import pytest
 from calculator import App
-from calculator.commands.add import AddCommand
-from calculator.commands.subtract import SubtractCommand
-from calculator.commands.multiply import MultiplyCommand
-from calculator.commands.divide import DivideCommand
-from calculator.commands.menu import MenuCommand
+from calculator.plugins.add import AddCommand
+from calculator.plugins.subtract import SubtractCommand
+from calculator.plugins.multiply import MultiplyCommand
+from calculator.plugins.divide import DivideCommand
+from calculator.plugins.menu import MenuCommand
+from calculator.commands import CommandHandler
 
 # Test for Add Command
 def test_add_command(capfd):
@@ -37,22 +38,27 @@ def test_divide_by_zero_command(capfd):
     assert result == "Error: Division by zero"
     
 # Test for Menu Command
-def test_menu_command(capfd):
-    # Create a dummy commands dictionary for testing
-    commands = {
-        "add": "AddCommand",
-        "subtract": "SubtractCommand",
-        "multiply": "MultiplyCommand",
-        "divide": "DivideCommand"
-    }
-
-    # Pass the dummy command dictionary to the MenuCommand
-    command = MenuCommand(commands)
+def test_menu_command():
+    # Simulate a command handler with registered commands
+    command_handler = CommandHandler()
     
-    # Capture the output
+    # Register plugins/commands
+    command_handler.register_command("add", AddCommand())
+    command_handler.register_command("subtract", SubtractCommand())
+    command_handler.register_command("multiply", MultiplyCommand())
+    command_handler.register_command("divide", DivideCommand())
+    
+    # Create the MenuCommand with the registered commands
+    command = MenuCommand(command_handler)
+    
+    # Execute the menu command and get the result
     result = command.execute()
-    captured = capfd.readouterr()
 
-    # Assert that the expected commands are listed in the output
-    assert "add" in result and "subtract" in result, "Display available commands"
-    assert "multiply" in result and "divide" in result, "Display all available commands"
+    # Assert that all expected commands are listed in the result
+    assert "add" in result, "add command should be listed"
+    assert "subtract" in result, "subtract command should be listed"
+    assert "multiply" in result, "multiply command should be listed"
+    assert "divide" in result, "divide command should be listed"
+    
+    
+  
