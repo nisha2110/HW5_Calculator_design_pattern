@@ -53,9 +53,15 @@ class App:
                 if len(parts) != 3:
                     print(f"Error: '{command_name}' requires two numeric arguments.")
                     continue
-                else:
+                # Check if the arguments are valid numbers
+                try:
                     arg1, arg2 = float(parts[1]), float(parts[2])
-                    result = self.command_handler.execute_command(command_name, arg1, arg2)
-                    print(result)
-                   
+                except ValueError:
+                    print("Error: Both arguments must be numbers.")
+                    continue
+
+                # Execute the command if arguments are valid
+                result = self.command_handler.execute_command(command_name, arg1, arg2)
+                print(result)
+
                
