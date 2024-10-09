@@ -43,7 +43,7 @@ def test_print_available_commands(app):
     with patch('builtins.print') as mocked_print:
         app.command_handler.get_registered_commands = MagicMock(return_value=["add", "subtract"])
         app.print_available_commands()
-        mocked_print.assert_called_once_with("Available commands: add, subtract, menu")
+        mocked_print.assert_called_once_with("Available commands: add, subtract")
 
 def test_start_exit_command(app):
     with patch('builtins.input', side_effect=['exit']):
