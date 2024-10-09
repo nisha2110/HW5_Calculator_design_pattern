@@ -21,17 +21,16 @@ Note When someone copies / clones my repository they will install the specfic li
 ## Testing
 
 1. pytest
-2. pytest --pylint
-3. pytest --pylint --cov
-4. python main.py
+2. pytest --cov
+3. python main.py
 
 ## Output:
-1. hpatel@LAPTOP-T97B270D:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
+1. hpatel:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
 - Hello World. Type 'exit' to exit.
 -  ->> exit
 -  Exiting...
 
-2. hpatel@LAPTOP-T97B270D:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
+2. hpatel:~/Webdeploy_projects2024/HW5_Calculator_design_pattern$ python main.py
 -  Type 'exit' to exit.
 -  Available commands: add, subtract, multiply, divide, menu
 -  ->> menu
