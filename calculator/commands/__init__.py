@@ -16,4 +16,8 @@ class CommandHandler:
         if name in self.commands:
             return self.commands[name].execute(*args)
         else:
-            return f"No such command: '{name}'" 
+            return f"No such command: '{name}'"
+        
+    # Add this method to return a list of registered commands
+    def get_registered_commands(self):
+        return list(self.commands.keys())  # Return the list of command names
